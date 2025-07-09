@@ -1,98 +1,4 @@
-/* .navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin:20px 160px;
-    position:fixed;
-    top:0;
-    z-index:1000;
-}
-.nav-menu{
-    display:flex;
-    align-items:center;
-    list-style:none;
-    gap:60px;
-    font-size:20px;
-}
-.nav-connect{
-  padding:20px 40px;
-  margin-left: 20px;
-  border-radius:50px;
-  background:linear-gradient(267deg,#DA7C25 0.36%,  #B923E1);
-  font-size:22px;
-  cursor:pointer;
-  transition:0.5s;
-}
-.nav-connect:hover{
-   transform:scale(1.05);
-}
-
-.nav-menu li{
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
-
-.nav-menu li img{
-  display:flex;
-  margin:auto;
-}
-
-.anchor-link{
-  text-decoration:none;
-  color:white;
-}
-.nav-mob-close{
-  display:none;
-}
-
-@media(max-width:768px){
-  .navbar{
-    margin:20px 50px;
-  }
-  .nav-connect{
-    display:none;
-  }
-  .nav-mob-open{
-    display:block;
-    position:fixed;
-    right:30px;
-  }
-  .nav-mob-close{
-    display:block;
-    position:relative;
-    top:30px;
-    left:290px;
-    width:30px;
-  }
-  .nav-menu{
-    position:fixed;
-    flex-direction:column;
-    align-items:start;
-    top:0;
-    gap:30px;
-    background-color:#1F0016;
-    width:350px;
-    height:100%;
-    z-index:2;
-    transition:right 0.5s;
-    right:-350px;
-  }
-  .nav-menu{
-    font-size:30px;
-    padding-left:100px;
-    flex-direction:row;
-    gap:20px;
-  }
-  
-}
-
-
- */
-
-
- .navbar {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,6 +66,18 @@
   width: 30px;
 }
 
+/* ========== Responsive Styles ========== */
+@media (max-width: 1024px) {
+  .navbar {
+    margin: 20px 40px;
+    width: calc(100% - 80px);
+  }
+
+  .nav-menu {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     margin: 20px 20px;
@@ -185,6 +103,12 @@
     padding: 50px 40px;
     font-size: 24px;
     z-index: 999;
+    gap: 40px;
+    transition: right 0.5s;
+  }
+
+  .nav-menu.open {
+    right: 0;
   }
 
   .nav-mob-close {
@@ -192,5 +116,9 @@
     top: 0;
     left: 220px;
     margin-bottom: 40px;
+  }
+
+  .nav-menu li {
+    align-items: start;
   }
 }
