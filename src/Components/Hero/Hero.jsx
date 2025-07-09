@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="hero-connect">
           <AnchorLink className="anchor-link" offset={50} href="#contact">Connect with Me</AnchorLink>
         </div>
-        <div className="hero-resume">My Resume</div>
+       <a href="/Resume.pdf" download={true} target="_blank"> <div className="hero-resume">My Resume</div></a>
       </div>
     </div>
   );
